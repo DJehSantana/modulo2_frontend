@@ -28,7 +28,7 @@ console.log(linguagens.length);
 console.log(itemRemovido);
 
 //EXERCICIO AT()
-console.log('\n** EX 04 ** \n');
+// console.log('\n** EX 04 ** \n');
 const produtos = ['sabao', 'detergente', 'amaciante', 'alvejante', 'sapolio'];
 
 let itemAcessado = produtos.at(0);
@@ -109,7 +109,7 @@ const maisDe40 = lugares.find(lugar => lugar.capacidade >= 40);
 console.log(maisDe40);
 
 //EXERCICIO FOREACH()
-console.log('\n** EX 08 ** \n');
+console.log('\n** EX 09 ** \n');
 
 const pizzas = [
   { sabor: 'Mussarela', valor: 20 },
@@ -122,7 +122,7 @@ const pizzas = [
 pizzas.forEach(pizza => console.log(`Pizza ${pizza.sabor} - R$${pizza.valor},00`));
 
 //EXERCICIO MAP()
-console.log('\n** EX 09 ** \n');
+console.log('\n** EX 10 ** \n');
 
 const listaPessoas = [
   { nome: 'João', altura: 1.75, peso: 80 },
@@ -142,7 +142,7 @@ const listaPessoasImc = listaPessoas.map(({ nome, altura, peso }) => {
 console.log(listaPessoasImc);
 
 //EXERCICIO REDUCE()
-console.log('\n** EX 10 ** \n');
+console.log('\n** EX 11 ** \n');
 
 const listaAlunos = [
   { nome: 'Ana', notas: [7, 8, 9] },
@@ -168,10 +168,44 @@ const listaMedias = listaAlunos.map((aluno) => {
 console.log(listaMedias);
 
 //EXERCICIO REVERSE()
-console.log('\n** EX 11 ** \n');
+console.log('\n** EX 12 ** \n');
 
 const numeros2 = [1, 2, 3, 4, 5];
 console.log(numeros2.reverse());
 
 //EXERCICIO SOME()
-console.log('\n** EX 12 ** \n');
+console.log('\n** EX 13 ** \n');
+
+const empregados = [
+  { nome: 'João', salario: 1200 },
+  { nome: 'Maria', salario: 1500 },
+  { nome: 'Pedro', salario: 1800 },
+  { nome: 'Ana', salario: 1400 },
+  { nome: 'Carlos', salario: 2000 }
+];
+
+const salarioMaiorQue1500 = empregados.some(empregado => empregado.salario >= 1500);
+const salarioMenorQue1000 = empregados.some(empregado => empregado.salario <= 1000);
+
+console.log({ salarioMaiorQue1500, salarioMenorQue1000 });
+
+//EXERCICIO SORT()
+console.log('\n** EX 14 ** \n');
+
+const atletas = [
+  { nome: 'João', altura: 1.75, peso: 80 },
+  { nome: 'Maria', altura: 1.68, peso: 60 },
+  { nome: 'Pedro', altura: 1.80, peso: 70 },
+  { nome: 'Ana', altura: 1.65, peso: 55 },
+  { nome: 'Carlos', altura: 1.90, peso: 100 }
+];
+
+atletas.sort((a, b) => a.peso - b.peso);
+console.log("\n Lista ordenada por peso - ordem crescente \n");
+console.log(atletas);
+atletas.sort((a, b) => b.altura - a.altura);
+console.log("\n Lista ordenada por altura - ordem decrescente \n");
+console.log(atletas);
+atletas.sort((a, b) => a.nome.localeCompare(b.nome));
+console.log("\n Lista em ordem alfabética \n");
+console.log(atletas);

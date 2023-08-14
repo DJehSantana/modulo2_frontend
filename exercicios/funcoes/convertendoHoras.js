@@ -2,7 +2,6 @@ function conversor(strHoras) {
 
   try {
 
-
     let [horas, minutos] = strHoras.split(':').map(Number);
 
     if (horas < 0 || minutos < 0 || horas > 23 || minutos > 59) {
