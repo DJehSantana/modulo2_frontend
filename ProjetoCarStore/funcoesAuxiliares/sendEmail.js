@@ -7,14 +7,16 @@ const sendEmail = (addressee, subject, body) => {
   if (!body)
     return "O corpo da mensagem precisa ser fornecido ao enviar um e-mail.";
 
-  console.log(`
-          De: news@carstore.com
-          Para: ${addressee}
-          Assunto: ${subject}
+  console.log(`  
+    De: news@carstore.com
+    Para: ${addressee}
+    Assunto: ${subject}
           
           ${body}
           
-          CarStore - Aqui você encontra o seu carro novo
+          \x1b[1mCarStore - Aqui você encontra o seu carro novo\x1b[0m
+
+-----------------------------------------------------------------------------
       `);
 
   return "E-mail enviado com sucesso!";

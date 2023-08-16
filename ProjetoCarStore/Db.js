@@ -1,10 +1,10 @@
-const categoriaCarros = require("./enums.js");
+const { categoriaCarros } = require("./enums.js");
 
 const Carros = [
   {
     modelo: "Gol",
     marca: "Wolkswagem",
-    ano: 2008,
+    ano: 2010,
     preco: 20500,
     categoria: [
       categoriaCarros.MAISVENDIDOS,
@@ -14,8 +14,8 @@ const Carros = [
   {
     modelo: "Celta",
     marca: "Chevrolet",
-    ano: 2013,
-    preco: 31800,
+    ano: 2018,
+    preco: 32800,
     categoria: [
       categoriaCarros.NOVOS,
       categoriaCarros.POPULARES
@@ -46,7 +46,6 @@ const Carros = [
     ano: 2018,
     preco: 37500,
     categoria: [
-      categoriaCarros.MAISVENDIDOS,
       categoriaCarros.MELHORESPRECOS
     ]
   },
@@ -56,15 +55,15 @@ const Carros = [
     ano: 2009,
     preco: 21600,
     categoria: [
-      categoriaCarros.MAISVENDIDOS,
+      categoriaCarros.POPULARES,
       categoriaCarros.MELHORESPRECOS
     ]
   },
   {
     modelo: "Classic",
     marca: "Chevrolet",
-    ano: 2010,
-    preco: 25500,
+    ano: 2012,
+    preco: 23500,
     categoria: [
       categoriaCarros.NOVOS
     ]
@@ -81,20 +80,29 @@ const Carros = [
   {
     modelo: "Civic",
     marca: "Honda",
-    ano: 2012,
-    preco: 42800,
+    ano: 2013,
+    preco: 39800,
     categoria: [
-      categoriaCarros.NOVOS,
-      categoriaCarros.MELHORESPRECOS
+      categoriaCarros.MELHORESPRECOS,
+      categoriaCarros.MAISVENDIDOS
     ]
   },
   {
     modelo: "HB20",
     marca: "Hyundai",
-    ano: 2015,
+    ano: 2018,
     preco: 41500,
     categoria: [
       categoriaCarros.MAISVENDIDOS
+    ]
+  },
+  {
+    modelo: "Sandero",
+    marca: "Renault",
+    ano: 2019,
+    preco: 39700,
+    categoria: [
+      categoriaCarros.POPULARES
     ]
   },
 ];
