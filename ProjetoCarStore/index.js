@@ -3,7 +3,6 @@ const { categoriaCarros, diasDaSemana } = require("./enums.js");
 const montarCorpoEmail = require("./funcoesAuxiliares/corpoEmail.js");
 const sendEmail = require("./funcoesAuxiliares/sendEmail.js");
 const verificaDiaSemana = require("./funcoesAuxiliares/verificaDiaSemana.js");
-const verificaMes = require("./funcoesAuxiliares/verificaMes.js");
 
 const listaEmailClientes = [];
 const hoje = new Date();
@@ -16,7 +15,7 @@ const listaCarros = Carros.filter(carro => {
 //Preenche a lista de emails com os emails dos clientes que atendem as condicoes
 Clientes.forEach(cliente => {
 
-  const visitouLojaUltimoMes = verificaMes(cliente.ultimaVisita);
+  const visitouLojaUltimoMes = cliente.ultimaVisita.getMonth() == hoje.getMonth();
   const receberComunicacoes = cliente.desejaReceberComunicacao;
 
   const email = cliente.email;
