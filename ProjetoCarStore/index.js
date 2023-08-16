@@ -14,14 +14,11 @@ const listaCarros = Carros.filter(carro => {
 
 //Preenche a lista de emails com os emails dos clientes que atendem as condicoes
 Clientes.forEach(cliente => {
-
   const visitouLojaUltimoMes = cliente.ultimaVisita.getMonth() == hoje.getMonth();
   const receberComunicacoes = cliente.desejaReceberComunicacao;
 
-  const email = cliente.email;
-
   if (visitouLojaUltimoMes && receberComunicacoes) {
-    listaEmailClientes.push(email);
+    listaEmailClientes.push(cliente.email);
   }
 });
 
