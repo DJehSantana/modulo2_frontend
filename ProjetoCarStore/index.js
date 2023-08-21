@@ -7,6 +7,13 @@ const verificaDiaSemana = require("./funcoesAuxiliares/verificaDiaSemana.js");
 const listaEmailClientes = [];
 const hoje = new Date();
 
+const diaSemana = verificaDiaSemana(hoje);
+
+if (diaSemana != diasDaSemana[2]) {
+  console.log("Hoje não é segunda-feira!");
+  return;
+}
+
 //Cria uma lista com os carros das categorias "novos" e "mais vendidos"
 const listaCarros = Carros.filter(carro => {
   return carro.categoria.some(cat => cat.includes(categoriaCarros.MAISVENDIDOS) || cat.includes(categoriaCarros.NOVOS));
@@ -22,14 +29,10 @@ Clientes.forEach(cliente => {
   }
 });
 
-const diaSemana = verificaDiaSemana(hoje);
+const body = montarCorpoEmail(listaCarros);
 
-if (diaSemana == diasDaSemana[1]) {
-  const body = montarCorpoEmail(listaCarros);
-
-  listaEmailClientes.forEach(email => {
-    sendEmail(email, "OFERTAS DO MÊS", body);
-  });
-}
+listaEmailClientes.forEach(email => {
+  sendEmail(email, "OFERTAS DO MÊS", body);
+});
 
 
