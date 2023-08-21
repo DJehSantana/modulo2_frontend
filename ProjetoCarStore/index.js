@@ -9,7 +9,7 @@ const hoje = new Date();
 
 const diaSemana = verificaDiaSemana(hoje);
 
-if (diaSemana != diasDaSemana[2]) {
+if (diaSemana != diasDaSemana[1]) {
   console.log("Hoje não é segunda-feira!");
   return;
 }
