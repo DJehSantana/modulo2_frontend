@@ -24,7 +24,7 @@ Clientes.forEach(cliente => {
 
 const diaSemana = verificaDiaSemana(hoje);
 
-if (diaSemana == diasDaSemana[3]) {
+if (diaSemana == diasDaSemana[1]) {
   const body = montarCorpoEmail(listaCarros);
 
   listaEmailClientes.forEach(email => {
